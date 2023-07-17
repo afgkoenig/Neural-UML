@@ -227,6 +227,12 @@ def main():
             img = img.convert("RGB")
             img.save(Path_results+f"image/pred_{img_name}.jpg")
 
-
+try:
+    os.mkdir("./input/image_crop/")
+    os.mkdir("./output/")
+    os.mkdir("./output/image/")
+    os.mkdir("./output/csv/")
+except:
+    FileExistsError
 
 main()
