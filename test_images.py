@@ -6,13 +6,11 @@ from shapely.geometry import Polygon
 import re
 from copy import deepcopy
 from PIL import Image,ImageDraw
-import shutil
 
 dict_dim = {128 : "fleche", 512 : "classe"}
 liste_name = ["a","b"]
 Path_test = "./input/original_image/" # image to visualize
 Path_results = "./output/" # directory with subdirectories "csv" and "image"
-model = YOLO("./best.pt") # choose your model
 
 
 # my version of Intersection over Union
@@ -101,8 +99,6 @@ def main():
             os.mkdir(Path_pred+"classe/")
         except : 
             FileExistsError
-            
-        #shutil.copy(Path_test+img_name,Path_pred+"original_x0_y0.jpg")
         
         img_name = img_name[:-4]
 
@@ -137,25 +133,19 @@ def main():
 
         # predict on image cropped
 
-        #model.predict(Path_test+img_name+".jpg",save=True,save_txt = True,conf=0.35,save_conf=True,device=0)
-
         Path = f"./runs/detect/{img_name}/"
 
         model = YOLO("./best.pt") # choose your model
 
-        model.predict(Path_pred+"classe",save=True,save_txt = True,conf=0.35,save_conf=True,device=0)
+        model.predict(Path_pred+"classe",save=True,save_txt = True,conf=0.35,save_conf=True)
 
-        model.predict(Path_pred+"fleche",save=True,save_txt = True,conf=0.2,save_conf=True,device=0,classes=[0,1,2,3,4,5])
+        model.predict(Path_pred+"fleche",save=True,save_txt = True,conf=0.2,save_conf=True,classes=[0,1,2,3,4,5])
 
         try :
             os.rename("./runs/detect/predict/",Path)
         except FileExistsError :
             print(f"{Path} already exists, please try an other image or remove this folder")
             break
-        
-
-        #shutil.copy(f"./runs/detect/predict/labels/{img_name}.txt",Path+"labels")
-        #shutil.copy(f"./runs/detect/predict/{img_name}.jpg",Path)
 
         # regroup all label in .txt to a single liste 
         liste = []
@@ -204,13 +194,8 @@ def main():
         liste_color = ["violet","indigo","blue","green","yellow","orange","red"]
         liste_data = ["navigable","inheritance","realization","dependency","aggregation","composition","classe"]
 
-        #liste_color = ["blue","red"]
-        #liste_data = ["fleche","classe"]
-
         img = Image.open(Path_test+f"{img_name}.jpg")
         img1 = ImageDraw.Draw(img)
-
-
 
         with open(Path_results+f"csv/pred_{img_name}.csv", newline='') as csvfile:
                 filereader = np.loadtxt(csvfile, delimiter=' ',usecols=(0,1,2,3,4))
