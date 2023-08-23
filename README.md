@@ -113,7 +113,3 @@ Then you can view the results in the folder :
 ├── datasetB
   ├── result
 ```
-
-## Dataset without annotation
-
-You also have the link of all images come from Lindholmen Dataset and declare to be a class diagram in "dataset_without_annotation.csv"
