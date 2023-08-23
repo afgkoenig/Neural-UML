@@ -27,20 +27,22 @@ conda install -c conda-forge jupyterlab
 
 With this code you can use the neural network create to detect element in a class diagram.
 
-For example we have put two image in folder : 
+For example, we have put two images in folder : 
 ```
 ├── input
   ├── oringinal_image
 ```
+Run the command :
 ```
 python test_images.py
 ```
 
-The results are in the folder :
+Then you can view the results and obtain the corresponding csv file in the folders :
 
 ```
 ├── output
   ├── image
+  ├── csv
 ```
 
 
