@@ -23,7 +23,26 @@ Install Jupyter Lab to visualize demo:
 conda install -c conda-forge jupyterlab
 ```
 
+## Testing
+
 With this code you can use the neural network create to detect element in a class diagram.
+
+For example we have put two image in folder : 
+```
+├── input
+  ├── oringinal_image
+```
+```
+python test_images.py
+```
+
+The results are in the folder :
+
+```
+├── output
+  ├── image
+```
+
 
 Just run the code "test_images.py" and you obtain a visualisation of the result in a folder "./output/image/". You also have the associate csv.
 
