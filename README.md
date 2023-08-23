@@ -61,11 +61,19 @@ You have just to put images in the folder "test" and run
 
 For example, we have put three images in folder : 
 ```
-├── test
+├── datasetA
+  ├── test
 ```
 Run the command :
 ```
-python view_annotation.py
+python ./datasetA/view_annotation.py
+```
+
+Then you can view the results in the folder :
+
+```
+├── datasetA
+  ├── result
 ```
 
 
