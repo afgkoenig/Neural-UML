@@ -151,7 +151,7 @@ def main():
         liste = []
         dir = os.listdir(Path+"labels/")
         for files in dir:
-            if files[:3] == "test":
+            if files[0] != "x" and files[0] != "y" :
                 delta = [0,0]
             else:
                 delta = re.findall(r'\d+', files)
