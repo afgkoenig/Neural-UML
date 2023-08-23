@@ -53,7 +53,22 @@ pip install --upgrade ultralytics"
 
 ## Dataset A
 
-In the folder "DatasetA" you have all annotations from Lindholmen Dataset.
+This folder contains all the annotation from Lindholmen Dataset
+
+DatasetA.csv contain the Link GitHub in the first column, you have to download by hand all images for the moment. You have to give the good name, it's given in column 2. Later, a code comes for scrap automatically the image from internet and associate the good name.
+
+You have just to put images in the folder "test" and run
+
+For example, we have put three images in folder : 
+```
+├── test
+```
+Run the command :
+```
+python view_annotation.py
+```
+
+
 
 In the folder "DatasetB" you have all annotation from the paper "Multiclass classification of four types of uml diagrams from images using deep learning".
 
