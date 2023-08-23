@@ -76,7 +76,37 @@ Then you can view the results in the folder :
   ├── result
 ```
 
+## DatasetB
 
+This folder contains all the annotation from the paper "Multiclass classification of four types of uml diagrams from images using deep learning".
+
+You have to download her dataset at the link : "http://doi.org/10.5281/zenodo.4595956" .
+You have to put the directory in the folder DatasetB.
+
+Run the command :
+```
+python ./datasetB/UML2toAnnotation.py
+```
+
+For example, we have put three images in folder : 
+```
+├── datasetB
+  ├── test
+```
+Run the command :
+```
+python ./datasetB/view_annotation.py
+```
+
+Then you can view the results in the folder :
+
+```
+├── datasetB
+  ├── result
+```
+
+
+The code viewannotation.py is here to view the annotation. You have just to put images in the folder "test" and run
 
 In the folder "DatasetB" you have all annotation from the paper "Multiclass classification of four types of uml diagrams from images using deep learning".
 
