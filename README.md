@@ -105,9 +105,6 @@ Then you can view the results in the folder :
   ├── result
 ```
 
-
-The code viewannotation.py is here to view the annotation. You have just to put images in the folder "test" and run
-
-In the folder "DatasetB" you have all annotation from the paper "Multiclass classification of four types of uml diagrams from images using deep learning".
+## Dataset without annotation
 
 You also have the link of all images come from Lindholmen Dataset and declare to be a class diagram in "dataset_without_annotation.csv"
