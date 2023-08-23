@@ -37,6 +37,15 @@ Run the command :
 python test_images.py
 ```
 
+If you run multiple times the command, please don't forget to delete folder :
+
+```
+├── input
+  ├── image_crop
+├── output
+├── runs
+```
+
 Then you can view the results and obtain the corresponding csv file in the folders :
 
 ```
