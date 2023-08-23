@@ -45,12 +45,13 @@ Then you can view the results and obtain the corresponding csv file in the folde
   ├── csv
 ```
 
+If you have an error with the utilisation of YOLO try to use the command :
 
-Just run the code "test_images.py" and you obtain a visualisation of the result in a folder "./output/image/". You also have the associate csv.
+```
+pip install --upgrade ultralytics"
+```
 
-You can test on your own image, you have just to put her in the folder "./input/original_image/" with name "test*"
-
-If you have an error with the utilisation of YOLO try to use the command "pip install --upgrade ultralytics"
+## Dataset A
 
 In the folder "DatasetA" you have all annotations from Lindholmen Dataset.
 
