@@ -1,3 +1,28 @@
+# NEURAL-UML
+This repository contains the source code for our paper:
+
+**NEURAL-UML: Intelligent Recognition System of Structural Elements in UML Class Diagram**
+
+## **Updates**
+- code for scraping coming soon!
+
+## **Installation**
+Create and activate conda environment:
+```
+conda create -n NEURAL-UML python=3.10
+conda activate NEURAL-UML
+```
+
+Install all dependencies:
+```
+pip install -r requirements.txt
+```
+
+Install Jupyter Lab to visualize demo:
+```
+conda install -c conda-forge jupyterlab
+```
+
 With this code you can use the neural network create to detect element in a class diagram.
 
 Just run the code "test_images.py" and you obtain a visualisation of the result in a folder "./output/image/". You also have the associate csv.
