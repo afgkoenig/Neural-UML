@@ -9,7 +9,7 @@ This repository contains the source code for our paper:
 ## **Installation**
 Create and activate conda environment:
 ```
-conda create -n NEURAL-UML python=3.10
+conda create -n NEURAL-UML
 conda activate NEURAL-UML
 ```
 
